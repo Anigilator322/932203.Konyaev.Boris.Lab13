@@ -1,3 +1,5 @@
+using Lab13.Services;
+
 namespace Lab13
 {
     public class Program
@@ -8,6 +10,7 @@ namespace Lab13
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddSingleton<IQuizService, QuizService>();
 
             var app = builder.Build();
 
